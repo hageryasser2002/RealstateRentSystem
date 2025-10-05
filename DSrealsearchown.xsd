@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSrealsearchown" targetNamespace="http://tempuri.org/DSrealsearchown.xsd" xmlns:mstns="http://tempuri.org/DSrealsearchown.xsd" xmlns="http://tempuri.org/DSrealsearchown.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="db1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db1ConnectionString (Settings)" PropertyReference="ApplicationSettings.RealStateRentSystem.Properties.Settings.GlobalReference.Default.db1ConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RealstateOwneTableAdapter" GeneratorDataComponentClassName="RealstateOwneTableAdapter" Name="RealstateOwne" UserDataComponentName="RealstateOwneTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db1ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT RealstateOwne.ID, RealstateOwne.Region_ID, RealstateOwne.SubResgionID, RealstateOwne.Building, RealstateOwne.Floor, RealstateOwne.FloorComment, RealstateOwne.Entrance, RealstateOwne.Distance, RealstateOwne.Building_Type_ID, RealstateOwne.Owner, 
+             RealstateOwne.Phone_one, RealstateOwne.Phone_Two, RealstateOwne.Mobile, RealstateOwne.Other, RealstateOwne.DateOfEnter, RealstateOwne.UserID, RealstateOwne.area, RealstateOwne.Price, RealstateOwne.investiture, RealstateOwne.WayOFOwner, 
+             RealstateOwne.[Key], RealstateOwne.[Note], RealstateOwne.Info_Source, RealstateOwne.active, RealstateOwne.DateOchange, bt.Building_Type, i.Investiture_Name, Users.User_Name, RealstateOwne.DateOchangeEvent, RealstateOwne.Rooms, RealstateOwne.Mobile2
+FROM   (((RealstateOwne LEFT OUTER JOIN
+             BuildingType bt ON bt.ID = RealstateOwne.Building_Type_ID) LEFT OUTER JOIN
+             OwnInvestiture i ON i.ID = RealstateOwne.investiture) LEFT OUTER JOIN
+             Users ON RealstateOwne.ID = Users.ID)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Region_ID" DataSetColumn="Region_ID" />
+              <Mapping SourceColumn="SubResgionID" DataSetColumn="SubResgionID" />
+              <Mapping SourceColumn="Building" DataSetColumn="Building" />
+              <Mapping SourceColumn="Floor" DataSetColumn="Floor" />
+              <Mapping SourceColumn="FloorComment" DataSetColumn="FloorComment" />
+              <Mapping SourceColumn="Entrance" DataSetColumn="Entrance" />
+              <Mapping SourceColumn="Distance" DataSetColumn="Distance" />
+              <Mapping SourceColumn="Building_Type_ID" DataSetColumn="Building_Type_ID" />
+              <Mapping SourceColumn="Owner" DataSetColumn="Owner" />
+              <Mapping SourceColumn="Phone_one" DataSetColumn="Phone_one" />
+              <Mapping SourceColumn="Phone_Two" DataSetColumn="Phone_Two" />
+              <Mapping SourceColumn="Mobile" DataSetColumn="Mobile" />
+              <Mapping SourceColumn="Other" DataSetColumn="Other" />
+              <Mapping SourceColumn="DateOfEnter" DataSetColumn="DateOfEnter" />
+              <Mapping SourceColumn="UserID" DataSetColumn="UserID" />
+              <Mapping SourceColumn="area" DataSetColumn="area" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+              <Mapping SourceColumn="investiture" DataSetColumn="investiture" />
+              <Mapping SourceColumn="WayOFOwner" DataSetColumn="WayOFOwner" />
+              <Mapping SourceColumn="Key" DataSetColumn="Key" />
+              <Mapping SourceColumn="Note" DataSetColumn="Note" />
+              <Mapping SourceColumn="Info_Source" DataSetColumn="Info_Source" />
+              <Mapping SourceColumn="active" DataSetColumn="active" />
+              <Mapping SourceColumn="DateOchange" DataSetColumn="DateOchange" />
+              <Mapping SourceColumn="DateOchangeEvent" DataSetColumn="DateOchangeEvent" />
+              <Mapping SourceColumn="Building_Type" DataSetColumn="Building_Type" />
+              <Mapping SourceColumn="Investiture_Name" DataSetColumn="Investiture_Name" />
+              <Mapping SourceColumn="User_Name" DataSetColumn="User_Name" />
+              <Mapping SourceColumn="Rooms" DataSetColumn="Rooms" />
+              <Mapping SourceColumn="Mobile2" DataSetColumn="Mobile2" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="db1ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBySearch" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySearch" GeneratorSourceName="FillBySearch" GetMethodModifier="Public" GetMethodName="GetDataBySearch" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySearch" UserSourceName="FillBySearch">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT      RealstateOwne.ID, RealstateOwne.Region_ID, RealstateOwne.SubResgionID, RealstateOwne.Building, RealstateOwne.Floor, RealstateOwne.FloorComment, RealstateOwne.Entrance, RealstateOwne.Distance, 
+                      RealstateOwne.Building_Type_ID, RealstateOwne.Owner, RealstateOwne.Phone_one, RealstateOwne.Phone_Two, RealstateOwne.Mobile, RealstateOwne.Other, RealstateOwne.DateOfEnter, RealstateOwne.UserID, RealstateOwne.area, 
+                      RealstateOwne.Price, RealstateOwne.investiture, RealstateOwne.WayOFOwner, RealstateOwne.[Key], RealstateOwne.[Note], RealstateOwne.Info_Source, RealstateOwne.active, RealstateOwne.DateOchange, bt.Building_Type, 
+                      i.Investiture_Name, Users.User_Name, RealstateOwne.Rooms
+FROM          (((RealstateOwne LEFT OUTER JOIN
+                      BuildingType bt ON bt.ID = RealstateOwne.Building_Type_ID) LEFT OUTER JOIN
+                      Investiture i ON i.ID = RealstateOwne.investiture) LEFT OUTER JOIN
+                      Users ON RealstateOwne.ID = Users.ID)
+WHERE      (RealstateOwne.Building = ?) AND (RealstateOwne.Floor = ?) AND (RealstateOwne.SubResgionID = ?) AND (RealstateOwne.ID &lt;&gt; ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="Building" DataSourceName="RealstateOwne" DataTypeServer="DbType.StringFixedLength(50)" DbType="String" Direction="Input" ParameterName="Building" Precision="0" ProviderType="WChar" Scale="0" Size="50" SourceColumn="Building" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="Floor" DataSourceName="RealstateOwne" DataTypeServer="DbType.Int32" DbType="Int32" Direction="Input" ParameterName="Floor" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Floor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="SubResgionID" DataSourceName="RealstateOwne" DataTypeServer="DbType.StringFixedLength(100)" DbType="String" Direction="Input" ParameterName="SubResgionID" Precision="0" ProviderType="WChar" Scale="0" Size="100" SourceColumn="SubResgionID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param4" ColumnName="ID" DataSourceName="RealstateOwne" DataTypeServer="DbType.Int32" DbType="Int32" Direction="Input" ParameterName="ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="db1ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByStatic" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStatic" GeneratorSourceName="FillByStatic" GetMethodModifier="Public" GetMethodName="GetDataByStatic" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStatic" UserSourceName="FillByStatic">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT      RealstateOwne.ID, RealstateOwne.Region_ID, RealstateOwne.SubResgionID, RealstateOwne.Building, RealstateOwne.Floor, RealstateOwne.FloorComment, RealstateOwne.Entrance, RealstateOwne.Distance, 
+                      RealstateOwne.Building_Type_ID, RealstateOwne.Owner, RealstateOwne.Phone_one, RealstateOwne.Phone_Two, RealstateOwne.Mobile, RealstateOwne.Other, RealstateOwne.DateOfEnter, RealstateOwne.UserID, RealstateOwne.area, 
+                      RealstateOwne.Price, RealstateOwne.investiture, RealstateOwne.WayOFOwner, RealstateOwne.[Key], RealstateOwne.[Note], RealstateOwne.Info_Source, RealstateOwne.active, RealstateOwne.DateOchange, bt.Building_Type, 
+                      i.Investiture_Name, Users.User_Name, RealstateOwne.DateOchangeEvent, RealstateOwne.Rooms
+FROM          (((RealstateOwne LEFT OUTER JOIN
+                      BuildingType bt ON bt.ID = RealstateOwne.Building_Type_ID) LEFT OUTER JOIN
+                      OwnInvestiture i ON i.ID = RealstateOwne.investiture) LEFT OUTER JOIN
+                      Users ON RealstateOwne.ID = Users.ID)
+WHERE      (RealstateOwne.active = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="db1ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="UpdateQuery">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE    RealstateOwne
+SET              DateOchange = ?
+WHERE     (ID = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="DateOchange" DataSourceName="RealstateOwne" DataTypeServer="DbType.Date" DbType="Date" Direction="Input" ParameterName="DateOchange" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="DateOchange" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="ID" DataSourceName="RealstateOwne" DataTypeServer="DbType.Int32" DbType="Int32" Direction="Input" ParameterName="Original_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="db1ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQueryevent" Modifier="Public" Name="UpdateQueryevent" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="UpdateQueryevent">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE     RealstateOwne
+SET              DateOchangeEvent = ?
+WHERE      (ID = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="DateOchangeEvent" DataSourceName="RealstateOwne" DataTypeServer="DbType.Date" DbType="Date" Direction="Input" ParameterName="DateOchangeEvent" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="DateOchangeEvent" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="ID" DataSourceName="RealstateOwne" DataTypeServer="DbType.Int32" DbType="Int32" Direction="Input" ParameterName="Original_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSrealsearchown" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSrealsearchown" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSrealsearchown">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RealstateOwne" msprop:Generator_RowEvHandlerName="RealstateOwneRowChangeEventHandler" msprop:Generator_RowDeletedName="RealstateOwneRowDeleted" msprop:Generator_RowDeletingName="RealstateOwneRowDeleting" msprop:Generator_RowEvArgName="RealstateOwneRowChangeEvent" msprop:Generator_RowChangedName="RealstateOwneRowChanged" msprop:Generator_TablePropName="RealstateOwne" msprop:Generator_UserTableName="RealstateOwne" msprop:Generator_RowChangingName="RealstateOwneRowChanging" msprop:Generator_RowClassName="RealstateOwneRow" msprop:Generator_TableClassName="RealstateOwneDataTable" msprop:Generator_TableVarName="tableRealstateOwne">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" minOccurs="0" />
+              <xs:element name="Region_ID" msprop:Generator_ColumnPropNameInTable="Region_IDColumn" msprop:Generator_ColumnPropNameInRow="Region_ID" msprop:Generator_UserColumnName="Region_ID" msprop:Generator_ColumnVarNameInTable="columnRegion_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SubResgionID" msprop:Generator_ColumnPropNameInTable="SubResgionIDColumn" msprop:Generator_ColumnPropNameInRow="SubResgionID" msprop:Generator_UserColumnName="SubResgionID" msprop:Generator_ColumnVarNameInTable="columnSubResgionID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Building" msprop:Generator_ColumnPropNameInTable="BuildingColumn" msprop:Generator_ColumnPropNameInRow="Building" msprop:Generator_UserColumnName="Building" msprop:Generator_ColumnVarNameInTable="columnBuilding" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Floor" msprop:Generator_ColumnPropNameInTable="FloorColumn" msprop:Generator_ColumnPropNameInRow="Floor" msprop:Generator_UserColumnName="Floor" msprop:Generator_ColumnVarNameInTable="columnFloor" type="xs:int" minOccurs="0" />
+              <xs:element name="FloorComment" msprop:Generator_ColumnPropNameInTable="FloorCommentColumn" msprop:Generator_ColumnPropNameInRow="FloorComment" msprop:Generator_UserColumnName="FloorComment" msprop:Generator_ColumnVarNameInTable="columnFloorComment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Entrance" msprop:Generator_ColumnPropNameInTable="EntranceColumn" msprop:Generator_ColumnPropNameInRow="Entrance" msprop:Generator_UserColumnName="Entrance" msprop:Generator_ColumnVarNameInTable="columnEntrance" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Distance" msprop:Generator_ColumnPropNameInTable="DistanceColumn" msprop:Generator_ColumnPropNameInRow="Distance" msprop:Generator_UserColumnName="Distance" msprop:Generator_ColumnVarNameInTable="columnDistance" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Building_Type_ID" msprop:Generator_ColumnPropNameInTable="Building_Type_IDColumn" msprop:Generator_ColumnPropNameInRow="Building_Type_ID" msprop:Generator_UserColumnName="Building_Type_ID" msprop:Generator_ColumnVarNameInTable="columnBuilding_Type_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Owner" msprop:Generator_ColumnPropNameInTable="OwnerColumn" msprop:Generator_ColumnPropNameInRow="Owner" msprop:Generator_UserColumnName="Owner" msprop:Generator_ColumnVarNameInTable="columnOwner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Phone_one" msprop:Generator_ColumnPropNameInTable="Phone_oneColumn" msprop:Generator_ColumnPropNameInRow="Phone_one" msprop:Generator_UserColumnName="Phone_one" msprop:Generator_ColumnVarNameInTable="columnPhone_one" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Phone_Two" msprop:Generator_ColumnPropNameInTable="Phone_TwoColumn" msprop:Generator_ColumnPropNameInRow="Phone_Two" msprop:Generator_UserColumnName="Phone_Two" msprop:Generator_ColumnVarNameInTable="columnPhone_Two" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mobile" msprop:Generator_ColumnPropNameInTable="MobileColumn" msprop:Generator_ColumnPropNameInRow="Mobile" msprop:Generator_UserColumnName="Mobile" msprop:Generator_ColumnVarNameInTable="columnMobile" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Other" msprop:Generator_ColumnPropNameInTable="OtherColumn" msprop:Generator_ColumnPropNameInRow="Other" msprop:Generator_UserColumnName="Other" msprop:Generator_ColumnVarNameInTable="columnOther" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateOfEnter" msprop:Generator_ColumnPropNameInTable="DateOfEnterColumn" msprop:Generator_ColumnPropNameInRow="DateOfEnter" msprop:Generator_UserColumnName="DateOfEnter" msprop:Generator_ColumnVarNameInTable="columnDateOfEnter" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_UserColumnName="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="area" msprop:Generator_ColumnPropNameInTable="areaColumn" msprop:Generator_ColumnPropNameInRow="area" msprop:Generator_UserColumnName="area" msprop:Generator_ColumnVarNameInTable="columnarea" type="xs:int" minOccurs="0" />
+              <xs:element name="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_UserColumnName="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" type="xs:double" minOccurs="0" />
+              <xs:element name="investiture" msprop:Generator_ColumnPropNameInTable="investitureColumn" msprop:Generator_ColumnPropNameInRow="investiture" msprop:Generator_UserColumnName="investiture" msprop:Generator_ColumnVarNameInTable="columninvestiture" type="xs:int" minOccurs="0" />
+              <xs:element name="WayOFOwner" msprop:Generator_ColumnPropNameInTable="WayOFOwnerColumn" msprop:Generator_ColumnPropNameInRow="WayOFOwner" msprop:Generator_UserColumnName="WayOFOwner" msprop:Generator_ColumnVarNameInTable="columnWayOFOwner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Key" msprop:Generator_ColumnPropNameInTable="KeyColumn" msprop:Generator_ColumnPropNameInRow="Key" msprop:Generator_UserColumnName="Key" msprop:Generator_ColumnVarNameInTable="columnKey" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Note" msprop:Generator_ColumnPropNameInTable="NoteColumn" msprop:Generator_ColumnPropNameInRow="Note" msprop:Generator_UserColumnName="Note" msprop:Generator_ColumnVarNameInTable="columnNote" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Info_Source" msprop:Generator_ColumnPropNameInTable="Info_SourceColumn" msprop:Generator_ColumnPropNameInRow="Info_Source" msprop:Generator_UserColumnName="Info_Source" msprop:Generator_ColumnVarNameInTable="columnInfo_Source" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="active" msprop:Generator_ColumnPropNameInTable="activeColumn" msprop:Generator_ColumnPropNameInRow="active" msprop:Generator_UserColumnName="active" msprop:Generator_ColumnVarNameInTable="columnactive" type="xs:int" minOccurs="0" />
+              <xs:element name="DateOchange" msprop:Generator_ColumnPropNameInTable="DateOchangeColumn" msprop:Generator_ColumnPropNameInRow="DateOchange" msprop:Generator_UserColumnName="DateOchange" msprop:Generator_ColumnVarNameInTable="columnDateOchange" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateOchangeEvent" msprop:Generator_ColumnPropNameInTable="DateOchangeEventColumn" msprop:Generator_ColumnPropNameInRow="DateOchangeEvent" msprop:Generator_UserColumnName="DateOchangeEvent" msprop:Generator_ColumnVarNameInTable="columnDateOchangeEvent" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Building_Type" msprop:Generator_ColumnPropNameInTable="Building_TypeColumn" msprop:Generator_ColumnPropNameInRow="Building_Type" msprop:Generator_UserColumnName="Building_Type" msprop:Generator_ColumnVarNameInTable="columnBuilding_Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Investiture_Name" msprop:Generator_ColumnPropNameInTable="Investiture_NameColumn" msprop:Generator_ColumnPropNameInRow="Investiture_Name" msprop:Generator_UserColumnName="Investiture_Name" msprop:Generator_ColumnVarNameInTable="columnInvestiture_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="User_Name" msprop:Generator_ColumnPropNameInTable="User_NameColumn" msprop:Generator_ColumnPropNameInRow="User_Name" msprop:Generator_UserColumnName="User_Name" msprop:Generator_ColumnVarNameInTable="columnUser_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rooms" msprop:Generator_ColumnPropNameInTable="RoomsColumn" msprop:Generator_ColumnPropNameInRow="Rooms" msprop:Generator_UserColumnName="Rooms" msprop:Generator_ColumnVarNameInTable="columnRooms" type="xs:int" minOccurs="0" />
+              <xs:element name="Mobile2" msprop:Generator_ColumnPropNameInRow="Mobile2" msprop:Generator_ColumnPropNameInTable="Mobile2Column" msprop:Generator_ColumnVarNameInTable="columnMobile2" msprop:Generator_UserColumnName="Mobile2" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:RealstateOwne" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
