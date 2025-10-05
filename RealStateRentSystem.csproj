@@ -1,0 +1,1270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{82BE48C6-7E19-41BD-96EA-1C9A9BFB8482}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RealStateRentSystem</RootNamespace>
+    <AssemblyName>RealStateRentSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>Images\icon.ico</ApplicationIcon>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\intelliGroup\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>5</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>5</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9880049FD25289AD7F757BABD0D978288F5D0B0E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>RealStateRentSystem_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\..\Windows\Microsoft.NET\Framework64\v2.0.50727\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration.ConfigurationManager, Version=9.0.0.6, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.9.0.6\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.Install">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.ServiceProcess">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="activesetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="activesetting.Designer.cs">
+      <DependentUpon>activesetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddToPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddToPhone.Designer.cs">
+      <DependentUpon>AddToPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APISetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APISetting.Designer.cs">
+      <DependentUpon>APISetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppFocusHelper.cs" />
+    <Compile Include="Classes\PermissionHelper.cs" />
+    <Compile Include="Classes\PhoneNormalizer.cs" />
+    <Compile Include="Classes\RealStateIdOwnerScope.cs" />
+    <Compile Include="Classes\RealStateIdScope.cs" />
+    <Compile Include="Classes\RelatedRecordsService.cs" />
+    <Compile Include="Classes\SessionManager.cs" />
+    <Compile Include="DSTables\DSrealowner.cs">
+      <DependentUpon>DSrealowner.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSTables\DSrealowner1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSrealowner.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSTables\DSrealstate.cs">
+      <DependentUpon>DSrealstate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUp\CustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FollowUp\CustomerDetails.Designer.cs">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUp\CustomerDetailsPanel.cs" />
+    <Compile Include="FollowUp\FollowUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FollowUp\FollowUp.Designer.cs">
+      <DependentUpon>FollowUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUp\testform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FollowUp\testform.Designer.cs">
+      <DependentUpon>testform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RealState\always.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealState\always.Designer.cs">
+      <DependentUpon>always.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlwaysPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlwaysPhone.Designer.cs">
+      <DependentUpon>AlwaysPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealState\Appointsearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealState\Appointsearch.Designer.cs">
+      <DependentUpon>Appointsearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttachComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttachComment.Designer.cs">
+      <DependentUpon>AttachComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\BackUp.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Classes\DataAccess.cs" />
+    <Compile Include="CopyWithBackgroundWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CopyWithBackgroundWorker.Designer.cs">
+      <DependentUpon>CopyWithBackgroundWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSTables\CalendarColumn.cs">
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Calls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calls.Designer.cs">
+      <DependentUpon>Calls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="career.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="career.Designer.cs">
+      <DependentUpon>career.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check.Designer.cs">
+      <DependentUpon>Check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="alwaysOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alwaysOwner.Designer.cs">
+      <DependentUpon>alwaysOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckPhone.Designer.cs">
+      <DependentUpon>CheckPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CareerType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CareerType.Designer.cs">
+      <DependentUpon>CareerType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CareerattachComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CareerattachComment.Designer.cs">
+      <DependentUpon>CareerattachComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="alwaysCareer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alwaysCareer.Designer.cs">
+      <DependentUpon>alwaysCareer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CareerSearchParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CareerSearchParameter.Designer.cs">
+      <DependentUpon>CareerSearchParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckCareer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckCareer.Designer.cs">
+      <DependentUpon>CheckCareer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="allsearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="allsearch.Designer.cs">
+      <DependentUpon>allsearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\AppointAlarmSound.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Clock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clock.Designer.cs">
+      <DependentUpon>Clock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\CallArchive.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="ArchivedCalls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchivedCalls.Designer.cs">
+      <DependentUpon>ArchivedCalls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSTables\DSrealsearchown.cs">
+      <DependentUpon>DSrealsearchown.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Redail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Redail.Designer.cs">
+      <DependentUpon>Redail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSTables\DSCalls.cs">
+      <DependentUpon>DSCalls.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DSTables\DSCalls.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCalls.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenPhoneRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenPhoneRecords.Designer.cs">
+      <DependentUpon>OpenPhoneRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\DataGridViewPrinter.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DSTables\DSappointment.cs">
+      <DependentUpon>DSappointment.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DSTables\DSappointment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSappointment.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="insertintophone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertintophone.Designer.cs">
+      <DependentUpon>insertintophone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Counting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Counting.Designer.cs">
+      <DependentUpon>Counting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSTables\CustomSource.cs">
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DSTables\DSrealsearchown.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSrealsearchown.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Classes\Modem.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="PrintGried.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintGried.Designer.cs">
+      <DependentUpon>PrintGried.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\SBackUp.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DSTables\DSsetting.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSsetting.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="phone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="phone.Designer.cs">
+      <DependentUpon>phone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\RealStaticAlarmSound.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="RealStaticMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealStaticMessageBox.Designer.cs">
+      <DependentUpon>RealStaticMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealStatics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealStatics.Designer.cs">
+      <DependentUpon>RealStatics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSTables\DScareer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DScareer.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DSTables\DScareersearch.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DScareersearch.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DSTables\DSphoneSearch.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSphoneSearch.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="PhoneattachComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhoneattachComment.Designer.cs">
+      <DependentUpon>PhoneattachComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSTables\DSphone.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSphone.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="phonesearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="phonesearch.Designer.cs">
+      <DependentUpon>phonesearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RelatedRecordsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RelatedRecordsForm.Designer.cs">
+      <DependentUpon>RelatedRecordsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToRentPrametr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToRentPrametr.Designer.cs">
+      <DependentUpon>ToRentPrametr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\StaticAlarmSound.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="StaticMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaticMessageBox.Designer.cs">
+      <DependentUpon>StaticMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ownerSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ownerSetting.Designer.cs">
+      <DependentUpon>ownerSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OWNSearchParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OWNSearchParameter.Designer.cs">
+      <DependentUpon>OWNSearchParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealstateOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealstateOwner.Designer.cs">
+      <DependentUpon>RealstateOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSTables\DSrealstate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSrealstate.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DSTables\DSrealstatesearch.cs">
+      <DependentUpon>DSrealstatesearch.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DSTables\DSrealstatesearch.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSrealstatesearch.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DSTables\DSregion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSregion.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DSTables\DSsetting.cs">
+      <DependentUpon>DSsetting.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DSTables\DSTempAttch.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSTempAttch.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Classes\GetDates.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="HMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMessageBox.Designer.cs">
+      <DependentUpon>HMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMsg.Designer.cs">
+      <DependentUpon>LoginMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Monthes.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Classes\CustomPath.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="RealState\Realstate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealState\Realstate.Designer.cs">
+      <DependentUpon>Realstate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Region.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Region.Designer.cs">
+      <DependentUpon>Region.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShortCutKeys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShortCutKeys.Designer.cs">
+      <DependentUpon>ShortCutKeys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\AlarmSound.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Statics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statics.Designer.cs">
+      <DependentUpon>Statics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TempAttach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TempAttach.Designer.cs">
+      <DependentUpon>TempAttach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToOwnPrametr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToOwnPrametr.Designer.cs">
+      <DependentUpon>ToOwnPrametr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\Utils.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Program.cs">
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="activesetting.resx">
+      <DependentUpon>activesetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddToPhone.resx">
+      <DependentUpon>AddToPhone.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APISetting.resx">
+      <DependentUpon>APISetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FollowUp\CustomerDetails.resx">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FollowUp\FollowUp.resx">
+      <DependentUpon>FollowUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FollowUp\testform.resx">
+      <DependentUpon>testform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealState\always.resx">
+      <DependentUpon>always.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlwaysPhone.resx">
+      <DependentUpon>AlwaysPhone.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealState\Appointsearch.resx">
+      <DependentUpon>Appointsearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttachComment.resx">
+      <DependentUpon>AttachComment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calls.resx">
+      <DependentUpon>Calls.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="career.resx">
+      <DependentUpon>career.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check.resx">
+      <DependentUpon>Check.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alwaysOwner.resx">
+      <DependentUpon>alwaysOwner.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckPhone.resx">
+      <DependentUpon>CheckPhone.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CareerType.resx">
+      <DependentUpon>CareerType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CareerattachComment.resx">
+      <DependentUpon>CareerattachComment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alwaysCareer.resx">
+      <DependentUpon>alwaysCareer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CareerSearchParameter.resx">
+      <DependentUpon>CareerSearchParameter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckCareer.resx">
+      <DependentUpon>CheckCareer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="allsearch.resx">
+      <DependentUpon>allsearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clock.resx">
+      <DependentUpon>Clock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArchivedCalls.resx">
+      <DependentUpon>ArchivedCalls.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyWithBackgroundWorker.resx">
+      <DependentUpon>CopyWithBackgroundWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Redail.resx">
+      <DependentUpon>Redail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenPhoneRecords.resx">
+      <DependentUpon>OpenPhoneRecords.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertintophone.resx">
+      <DependentUpon>insertintophone.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Counting.resx">
+      <DependentUpon>Counting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="phone.resx">
+      <DependentUpon>phone.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintGried.resx">
+      <DependentUpon>PrintGried.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealStaticMessageBox.resx">
+      <DependentUpon>RealStaticMessageBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealStatics.resx">
+      <DependentUpon>RealStatics.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhoneattachComment.resx">
+      <DependentUpon>PhoneattachComment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="phonesearch.resx">
+      <DependentUpon>phonesearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToRentPrametr.resx">
+      <DependentUpon>ToRentPrametr.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaticMessageBox.resx">
+      <DependentUpon>StaticMessageBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ownerSetting.resx">
+      <DependentUpon>ownerSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OWNSearchParameter.resx">
+      <DependentUpon>OWNSearchParameter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealstateOwner.resx">
+      <DependentUpon>RealstateOwner.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMessageBox.resx">
+      <DependentUpon>HMessageBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMsg.resx">
+      <DependentUpon>LoginMsg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealState\Realstate.resx">
+      <DependentUpon>Realstate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Region.resx">
+      <DependentUpon>Region.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortCutKeys.resx">
+      <DependentUpon>ShortCutKeys.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statics.resx">
+      <DependentUpon>Statics.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempAttach.resx">
+      <DependentUpon>TempAttach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToOwnPrametr.resx">
+      <DependentUpon>ToOwnPrametr.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransDialog.resx">
+      <DependentUpon>TransDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wayofown.resx">
+      <DependentUpon>wayofown.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="DSTables\DSsetting.xsc">
+      <DependentUpon>DSsetting.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSsetting.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DSsetting.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSsetting.xss">
+      <DependentUpon>DSsetting.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="wayofown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wayofown.Designer.cs">
+      <DependentUpon>wayofown.cs</DependentUpon>
+    </Compile>
+    <None Include="RealStateRentSystem_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DSTables\DSrealstate.xsc">
+      <DependentUpon>DSrealstate.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSrealstate.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSrealstate.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSrealstate.xss">
+      <DependentUpon>DSrealstate.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSregion.xsc">
+      <DependentUpon>DSregion.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSregion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSregion.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSregion.xss">
+      <DependentUpon>DSregion.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\title_bar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DSTables\DSrealstatesearch.xsc">
+      <DependentUpon>DSrealstatesearch.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSrealstatesearch.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSrealstatesearch.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSrealstatesearch.xss">
+      <DependentUpon>DSrealstatesearch.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AG00040_.GIF">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\lvback.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AG00092_.GIF">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\dynamiczoom.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\home-menu.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\messenger_big.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\setting.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\image1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\region.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\key.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Address-Book.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DSTables\DSTempAttch.xsc">
+      <DependentUpon>DSTempAttch.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSTempAttch.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSTempAttch.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSTempAttch.xss">
+      <DependentUpon>DSTempAttch.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\logo .jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="Resources\app3.png" />
+    <Content Include="Resources\call.png" />
+    <Content Include="Resources\call1.png" />
+    <Content Include="Resources\call2.png" />
+    <Content Include="Resources\mobile-phone %281%29.png" />
+    <Content Include="Resources\mobile-phone.png" />
+    <Content Include="Resources\mobile-phone_3617011 %281%29.png" />
+    <Content Include="Resources\mobile-phone_3617011.png" />
+    <Content Include="Resources\phone-call.png" />
+    <Content Include="Resources\phone-call2.png" />
+    <Content Include="Resources\smartphone %281%29.png" />
+    <Content Include="Resources\smartphone-call.png" />
+    <Content Include="Resources\smartphone.png" />
+    <Content Include="Resources\telephone-call1.png" />
+    <None Include="Resources\app.png" />
+    <None Include="Images\app.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Images\download_24px.png" />
+    <Content Include="Images\icon.ico" />
+    <EmbeddedResource Include="Images\keyLogin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\RealStateRate.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Images\images.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\Call_Dial.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSappointment.xsc">
+      <DependentUpon>DSappointment.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSappointment.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSappointment.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSappointment.xss">
+      <DependentUpon>DSappointment.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSCalls.xsc">
+      <DependentUpon>DSCalls.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSCalls.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCalls.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSCalls.xss">
+      <DependentUpon>DSCalls.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSrealsearchown.xsc">
+      <DependentUpon>DSrealsearchown.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSrealsearchown.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSrealsearchown.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSrealsearchown.xss">
+      <DependentUpon>DSrealsearchown.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\Homean.GIF">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\fieldnonpublic.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\designer_icon.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\ctxhelp_opn.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Images\readebook.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\SES_D.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\base.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\Keywords.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DScareer.xsc">
+      <DependentUpon>DScareer.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DScareer.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DScareer.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DScareer.xss">
+      <DependentUpon>DScareer.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DScareersearch.xsc">
+      <DependentUpon>DScareersearch.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DScareersearch.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DScareersearch.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DScareersearch.xss">
+      <DependentUpon>DScareersearch.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSphone.xsc">
+      <DependentUpon>DSphone.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSphone.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSphone.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSphone.xss">
+      <DependentUpon>DSphone.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSphoneSearch.xsc">
+      <DependentUpon>DSphoneSearch.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSphoneSearch.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSphoneSearch.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSphoneSearch.xss">
+      <DependentUpon>DSphoneSearch.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSrealowner.xsc">
+      <DependentUpon>DSrealowner.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DSTables\DSrealowner.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LastGenOutput>DSrealowner1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSTables\DSrealowner.xss">
+      <DependentUpon>DSrealowner.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\help.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\RealStateRentSystem_Buisness\RealStateRentSystem_Buisness.csproj">
+      <Project>{41aa4da2-3533-46eb-b538-510751c3364e}</Project>
+      <Name>RealStateRentSystem_Buisness</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
